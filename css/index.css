@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --dark: #000000;
+    --white: #ffffff;
+    --accent: #0000FF;
+    --icons: #87ceeb;
+}
+body {
+    background: var(--dark);
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.my-logo {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadein 1s infinite alternate;
+}
+.logo {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 900;
+    font-size: clamp(1rem, 5vw, 2rem);
+    font-family: Segoe UI, sans serif;
+}
+.log {
+    font-size: clamp(1rem, 2vw, 1rem);
+    font-weight: 500;
+    color: var(--white);
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+@keyframes fadein {
+    from {
+        transform: rotate(-2deg);
+    }
+    to {
+        transform: rotate(2deg);
+    }
+}
+.my-logo:hover {
+    animation-delay: 60s;
+    animation-fill-mode: backwards;
+}
+.d-link {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 2rem;
+    opacity: .7;
+    font-weight: 700;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: Poppins, sans serif;
+}
+.d-link:hover {
+    opacity: 1;
+}
+.d-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 3px;
+    bottom: -2px;
+    color: white;
+    transition: .4s;
+    background: white;
+}
+.d-link:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+.link, .g-link {
+    display: flex;
+    color: var(--dark);
+    background-color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    padding: .5rem .7rem;
+    border: 1px solid var(--white);
+    border-radius: 20px;
+    font-family: Poppins, sans serif;
+    transition: transform .4s;
+    opacity: .7;
+}
+.g-link:hover {
+    transform: translateY(-4px);
+    opacity: 1;
+}
+.link:hover {
+    transform: translateY(-4px);
+    opacity: 1;
+}
+.g-link:active {
+    background: var(--dark);
+}
+.link:active {
+    background: var(--dark);
+}
+@media(max-width:930px) {
+    .link {
+        display: none;
+    }
+}
+.hero {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    padding: .5rem;
+}
+.center {
+    grid-column: 2/19;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#heading {
+    text-align: center;
+    font-size: clamp(1.7rem, 5vw, 4rem);
+    margin-bottom: .5rem;
+    letter-spacing: 2px;
+}
+.high {
+    color: white;
+}
+.hero-meta {
+    font-size: clamp(16px, 1.5vw, 2rem);
+    text-align: center;
+    margin: .5rem;
+    font-family: Poppins, sans serif;
+    color: aquamarine;
+    letter-spacing: .7px;
+    opacity: .7;
+}
+.dev {
+    margin: .5rem;
+    font-family: Poppins, sans serif;
+    opacity: .7;
+}
+.bolden {
+    font-weight: 900;
+    font-family: monospace, sans serif;
+}
+.img-isr {
+    height: 180px;
+    width: 180px;
+    border: 1px solid black;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: .5rem;
+}
+#socials {
+    color: var(--white);
+    font-family: Poppins, sans serif;
+}
+.social-nav {
+    display: flex;
+    flex-direction: column;
+}
+.fa-brands, .fa-solid {
+    margin: 1rem;
+    font-size: clamp(16px, 2vw, 2rem);
+    transition: transform .4s;
+}
+.fa-solid:hover {
+    transform: translateY(-4px);
+}
+.fa-brands:hover {
+    transform: translateY(-4px);
+}
+.s-icons {
+    grid-column: 19/20;
+}
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.fa-square-github, .fa-tiktok, .fa-envelope {
+    color: var(--white);
+}
+.fa-telegram, .fa-phone {
+    color: var(--icons);
+}
+.fa-youtube, .fa-instagram {
+    color: red;
+}
+.fa-discord {
+    color: blue;
+}
+.footer {
+    display: flex;
+    justify-content: end;
+    color: white;
+    font-family: Poppins, sans serif;
+    padding-right: 3rem;
+}
+.footer-nav {
+    display: none;
+}
+.foot {
+    opacity: .7;
+}
+@media(max-width:740px) {
+    .s-icons, .navbar {
+        display: none;
+    }
+    .menu {
+        display: flex;
+    }
+}
+@media(max-width:500px) {
+    .center {
+    }
+    .hero {
+        display: flex;
+        flex-direction: column;
+    }
+    .icons, .social-nav {
+        display: flex;
+        flex-direction: row;
+    }
+    .fa-brands, .fa-solid {
+    margin: .4rem;
+    transition: transform .4s;
+    }
+    #socials, .icons {
+        display: none;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .footer-nav {
+        display: flex;
+    }
+}
