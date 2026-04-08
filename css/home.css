@@ -174,9 +174,11 @@ ul {
     border: none;
     border-radius: 10px;
     font-weight: bold;
+    transform: translateY(-1px);
 }
 .webs-link {
     position: relative;
+    transition: transform .4s;
 }
 .webs-link:hover::before {
     position: absolute;
@@ -190,6 +192,7 @@ ul {
     border: none;
     border-radius: 10px;
     font-weight: bold;
+    transition: transform .4s;
 }
 .git-link {
     position: relative;
@@ -238,6 +241,7 @@ ul {
     border: none;
     border-radius: 10px;
     font-weight: bold;
+    transition: transform .4s;
 }
 .fa-brands, .fa-solid {
     font-size: 1.5rem;
@@ -374,6 +378,7 @@ ul {
     margin: .6rem;
     padding: .5rem .4rem;
     font-weight: bold;
+    font-size: .9rem;
     font-family: 'Courier New', Courier, monospace;
     border: none;
     border-radius: 30px;
@@ -385,20 +390,17 @@ ul {
 }
 .p-link:hover {
     opacity: 1;
-}
-.p-link:active {
-    color: white;
+    color: var(--white);
 }
 .p-link:hover::after {
     content: url(../images/right.svg);
-    fill: black;
     padding: 0;
     width: 10px;
     height: 4px;
 }
 .p-link::before {
     content: '';
-    background-color: rgb(14, 16, 20);
+    background-color: rgb(32, 32, 33);
     position: absolute;
     inset: 0;
     transform: scaleX(0);

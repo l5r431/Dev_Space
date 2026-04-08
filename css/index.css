@@ -227,8 +227,6 @@ body {
     }
 }
 @media(max-width:500px) {
-    .center {
-    }
     .hero {
         display: flex;
         flex-direction: column;
