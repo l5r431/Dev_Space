@@ -473,7 +473,6 @@ ul {
     border-radius: 50%;
     float: right;
     transform: translateY(-5rem);
-    z-index: 3;
 }
 .fa-quote-left {
     position: absolute;
