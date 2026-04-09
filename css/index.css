@@ -193,17 +193,17 @@ body {
     height: 100%;
     z-index: -1;
 }
-.fa-square-github, .fa-tiktok, .fa-envelope {
+.fa-square-github, .fa-tiktok, .fa-envelope, .fa-bluesky {
     color: var(--white);
 }
-.fa-telegram, .fa-phone {
+.fa-telegram, .fa-dribbble {
     color: var(--icons);
 }
 .fa-youtube, .fa-instagram {
-    color: red;
+    color: rgb(255, 77, 77);
 }
 .fa-discord {
-    color: blue;
+    color: rgb(81, 81, 255);
 }
 .footer {
     display: flex;
@@ -211,18 +211,30 @@ body {
     color: white;
     font-family: Poppins, sans serif;
     padding-right: 3rem;
-}
-.footer-nav {
     display: none;
 }
 .foot {
     opacity: .7;
+    font-size: .8rem;
 }
 @media(max-width:740px) {
-    .s-icons, .navbar {
+    .navbar, .s-icons, .icons {
         display: none;
     }
+    .fa-brands, .fa-solid {
+        margin: .5rem;
+    }
     .menu {
+        display: flex;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .footer-nav {
         display: flex;
     }
 }
@@ -241,15 +253,5 @@ body {
     }
     #socials, .icons {
         display: none;
-    }
-    .footer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-    }
-    .footer-nav {
-        display: flex;
     }
 }
