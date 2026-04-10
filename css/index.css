@@ -95,7 +95,7 @@ body {
     border-radius: 20px;
     font-family: Poppins, sans serif;
     transition: transform .4s;
-    opacity: .7;
+    opacity: .9;
 }
 .g-link:hover {
     transform: translateY(-4px);
@@ -110,11 +110,6 @@ body {
 }
 .link:active {
     background: var(--dark);
-}
-@media(max-width:930px) {
-    .link {
-        display: none;
-    }
 }
 .hero {
     display: grid;
@@ -217,6 +212,15 @@ body {
     opacity: .7;
     font-size: .8rem;
 }
+@media(max-width:930px) {
+    .link {
+        display: none;
+    }
+    .img-isr {
+        width: 150px;
+        height: 150px;
+    }
+}
 @media(max-width:740px) {
     .navbar, .s-icons, .icons {
         display: none;
@@ -253,5 +257,9 @@ body {
     }
     #socials, .icons {
         display: none;
+    }
+    .img-isr {
+        width: 120px;
+        height: 120px;
     }
 }
