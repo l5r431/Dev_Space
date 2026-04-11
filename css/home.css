@@ -10,6 +10,7 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    transition: all 0.2s ease-in-out;
 }
 p {
     font-family: Poppins, Sans Serif;
@@ -347,12 +348,9 @@ ul {
         grid-template-columns: repeat(2, minmax(200px, 1fr));
     }
 }
-@media(max-width:500px) {
+@media(max-width:630px) {
     .project-cards {
         grid-template-columns: repeat(1, minmax(200px, 1fr));
-    }
-    #projects {
-        font-size: 1rem;
     }
 }
 .p-des {
