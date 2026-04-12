@@ -15,47 +15,6 @@
 p {
     font-family: Poppins, Sans Serif;
 }
-.hero {
-    text-align: center;
-    background-color: var(--dark);
-    padding-top: 1rem;
-}
-#q-links {
-    display: inline;
-    font-size: clamp(.9rem, 2vw, 1.5rem);
-    font-weight: 900;
-    margin: .3rem 0;
-    padding: .3rem .5rem;
-    border-top: 1px solid white;
-    border-radius: 20px;
-    color: var(--white);
-    font-family: Segoe UI, Sans serif
-}
-.quick-l {
-    display: flex;
-    justify-content: center;
-}
-.q-link {
-    text-decoration: none;
-    color: var(--white);
-    background: var(--dark);
-    border-bottom: 1px solid var(--white);
-    border-radius: 20px;
-    padding: .5rem .7rem;
-    font-weight: bold;
-    margin: .5rem .3rem;
-    opacity: .7;
-    font-size: clamp(.5rem, 1vw, 1rem);
-}
-.testim {
-    padding: .5rem 1rem;
-}
-.q-link:hover {
-    transform: translateY(2px);
-    transition-duration: .4s;
-    opacity: .9;
-    box-shadow: 0 0 5px white;
-}
 .top {
     position: fixed;
     bottom: 10px;
@@ -196,10 +155,10 @@ ul {
     font-weight: bold;
     transition: transform .4s;
 }
-.git-link {
+.github-link {
     position: relative;
 }
-.git-link:hover::before {
+.github-link:hover::before {
     position: absolute;
     bottom: -30px;
     left: -10px;
@@ -245,22 +204,18 @@ ul {
     font-weight: bold;
     transition: transform .4s;
 }
-.fa-brands, .fa-solid {
-    font-size: 1.5rem;
-}
 .fa-linkedin {
     color: rgb(66, 66, 180);
+    font-size: 1.5rem;
 }
 .fa-square-github, .fa-square-x-twitter {
     color: rgb(255, 255, 255);
-}
-.fa-youtube {
-    color: red;
     font-size: 1.5rem;
-    margin: .5rem;
 }
+
 .fa-globe {
     color: deepskyblue;
+    font-size: 1.5rem;
 }
 .fa-youtube:hover {
     transform: scale(1.2);
