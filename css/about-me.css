@@ -21,6 +21,9 @@ main {
     color: var(--white);
     position: relative;
 }
+body::selection {
+    color: rgb(56, 255, 1);
+}
 .s-head {
     text-align: center;
     margin-top: .5rem;
@@ -37,7 +40,7 @@ main {
     flex-direction: column;
     margin-top: 1rem;
     border-bottom: 1px solid rgb(20, 20, 20);
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
 }
 .ink {
     color: var(--white);
@@ -64,48 +67,30 @@ main {
 .ink:hover i {
   transform: rotate(360deg) scale(1.2);
 }
-.socials {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 0 .5rem;
+.q-links {
+    text-align: center;
+    margin-top: 1rem;
+    text-decoration: underline;
+    opacity: .6;
+    margin-bottom: 1rem;
 }
-.s-link {
+.quick-links {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #ffffff;
+}
+.q-link {
+    color: var(--white);
     text-decoration: none;
-    padding: .5rem;
-    font-size: .6rem;
+    font-style: italic;
+    font-weight: bold;
+    margin: .7rem;
+    opacity: .8;
     transition: transform .4s;
 }
-.s-link:hover {
-    transform: scale(1.04);
-}
-.fa-telegram, .fa-bluesky {
-    margin: .1rem;
-    font-size: 1.2rem;
-    color: aquamarine;
-}
-.fa-envelope, .fa-dribbble {
-    margin: .1rem;
-    font-size: 1.2rem;
-    color: rgb(127, 157, 255);
-}
-.fa-youtube, .fa-instagram {
-    margin: .1rem;
-    font-size: 1.2rem;
-    color: rgb(255, 74, 74);
-}
-.fa-square-github, .fa-tiktok {
-    margin: .1rem;
-    font-size: 1.2rem;
-    color: rgb(255, 255, 255);
-}
-.fa-discord {
-    margin: .1rem;
-    font-size: 1.2rem;
-    color: rgb(48, 48, 255);
+.q-link:hover {
+    opacity: 1;
+    transform: translateX(3px);
 }
 .hero {
     line-height: inherit;

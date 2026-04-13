@@ -125,8 +125,8 @@ ul {
 }
 .you-link:hover::before {
     position: absolute;
-    bottom: -20px;
-    left: -5px;
+    bottom: -30px;
+    left: -10px;
     content: 'Youtube';
     color: white;
     text-decoration: none;
@@ -215,6 +215,10 @@ ul {
 
 .fa-globe {
     color: deepskyblue;
+    font-size: 1.5rem;
+}
+.fa-youtube {
+    color: rgb(253, 81, 81);
     font-size: 1.5rem;
 }
 .fa-youtube:hover {

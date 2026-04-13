@@ -16,18 +16,17 @@
 .fa-discord, .fa-tiktok, .fa-envelope {
     color: white;
     margin: .3rem;
+    font-size: 1.5rem;
 }
-.fa-phone {
-    color: green;
-    margin: .3rem;
-}
-.fa-telegram {
+.fa-telegram, .fa-bluesky {
     color: aquamarine;
     margin: .3rem;
+    font-size: 1.5rem;
 }
-.fa-instagram {
+.fa-instagram, .fa-dribbble {
     color: rgb(194, 83, 83);
     margin: .3rem;
+    font-size: 1.5rem;
 }
 #copyright {
     color: white;
