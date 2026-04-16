@@ -287,16 +287,22 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid rgb(47, 47, 47);
+    border: 2px solid rgb(0, 0, 0);
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     background-color: rgb(14, 13, 13);
-    box-shadow: 0px 0px 10px 0px rgba(255,255,255,0.53);
     transition: transform .5s;
 }
 .p-card:hover {
     transform: scale(1.06);
     cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+    border: 1px solid var(--white);
+
+    .image {
+       height: 250px;
+       width: 100%;
+    }
 }
 .last {
     display: none;
@@ -347,14 +353,14 @@ ul {
 .p-link {
     color: #000;
     text-decoration: none;
-    background-color: white;
+    background: white;
     margin: .6rem;
-    padding: .3rem .4rem;
+    padding: .4rem;
     font-weight: bold;
     font-size: .9rem;
     font-family: Poppins;
     border: none;
-    border-radius: 30px;
+    border-radius: 20px;
     position: relative;
     overflow: hidden;
     z-index: 0;
