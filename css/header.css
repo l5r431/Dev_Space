@@ -89,34 +89,41 @@
     opacity: .8;
     font-size: 1.1rem;
     font-family: Poppins, sans-serif;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 0 .5rem;
+    transition: transform .8s;
 }
 .link:hover {
     opacity: 1;
-    transform: translateX(1px);
-    transition-duration: .4s;
+    transform: scale(1.1);
 }
-.link::after {
-    position: absolute;
+.link::before {
     content: '';
-    left: 0;
-    bottom: -2px;
-    width: 0;
-    height: 3px;
-    background: linear-gradient(to right, white, blue);
-    transition: .4s;
+    background: linear-gradient(45deg, white, black, pink);
+    filter: blur(4px);
+    inset: -3px;
+    position: absolute;
+    border: none;
+    z-index: -1;
+    transition: .8s;
+    transition: opacity 0.4s ease;
+    animation: spin 5s cubic-bezier(0.3, 0.8, 0.2, 1.3) infinite;
 }
-.link:hover::after {
-    width: 100%;
-}
-.icon {
-    height: 24px;
-    width: 24px;
-    color: white;
-    margin-right: 1rem;
-    opacity: .8;
-}
-.icon:hover {
+.link:hover::before {
     opacity: 1;
+    animation: spin .5s linear infinite;
+    background: linear-gradient(45deg, white, red, blue, green, orange, pink);
+    filter: blur(10px);
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 @media (max-width:1130px) {
     .link {
@@ -139,9 +146,6 @@
 @media (max-width:400px) {
     .navbar {
         display: none;
-    }
-    .profile {
-        margin-right: 2rem;
     }
     .menu {
         display: flex;
