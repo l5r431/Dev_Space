@@ -10,10 +10,9 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    transition: all 0.2s ease-in-out;
 }
 p {
-    font-family: Poppins, Sans Serif;
+    font-family: Poppins, sans-serif;
 }
 .top-wrapper {
     position: fixed;
