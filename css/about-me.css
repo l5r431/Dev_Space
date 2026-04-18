@@ -118,6 +118,11 @@ main {
     position: absolute;
     left: 1rem;
     bottom: -70px; 
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+.mine:hover {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
 }
 .my-name {
     color: var(--white);
@@ -126,7 +131,7 @@ main {
 .git-link {
     color: var(--white);
     text-decoration: none;
-    background: linear-gradient(135deg, #7e3481, #a855f7);
+    background: linear-gradient(90deg, #f701ff, #8400ff);
     padding: .2rem .5rem .3rem .7rem;
     border: none;
     border-radius: 20px;
@@ -140,6 +145,21 @@ main {
 .git-link:hover {
     opacity: .8;
     transform: scale(1.01);
+}
+.git-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #f701ff, #8400ff);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity .6s ease;
+}
+
+.git-link:hover::before {
+  opacity: 1;
 }
 .icon-g {
     width: 20px;
@@ -188,6 +208,10 @@ main {
   overflow: hidden;
   z-index: 1;
   cursor: pointer;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp .6s ease forwards;
+  animation-delay: .5s;
 }
 .feeds::before {
   content: '';
