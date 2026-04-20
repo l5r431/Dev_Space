@@ -8,18 +8,7 @@
     position: sticky;
     top: 0;
     z-index: 1;
-    border-bottom: 1px solid white;
-}
-.logo {
-    text-decoration: none;
-    margin: .5rem 1rem;
-    font-weight: 900;
-    font-family: "Bitcount Grid Double Ink", system-ui;;
-    font-size: 2rem;
-}
-.logo:hover {
-    transform: translateX(2px);
-    transition-duration: .4s;
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 .navbar-mobile {
     position: fixed;
@@ -81,18 +70,22 @@
     display: flex;
     flex-wrap: wrap;
 }
+.icon {
+    width: 100px;
+    height: 50px;
+}
 .link {
     color: white;
     text-decoration: none;
     font-weight: 700;
-    margin: .5rem 1.5rem;
+    margin: 0 1.5rem;
     opacity: .8;
     font-size: 1.1rem;
     font-family: Poppins, sans-serif;
     position: relative;
     overflow: hidden;
     border-radius: 5px;
-    padding: 0 .5rem;
+    padding: .2rem .5rem;
     transition: transform .8s;
 }
 .link:hover {
@@ -101,29 +94,14 @@
 }
 .link::before {
     content: '';
-    background: linear-gradient(45deg, white, black, pink);
-    filter: blur(4px);
-    inset: -3px;
+    inset: -2px;
+    background: dimgray;
     position: absolute;
-    border: none;
+    opacity: 0;
     z-index: -1;
-    transition: .8s;
-    transition: opacity 0.4s ease;
-    animation: spin 5s cubic-bezier(0.3, 0.8, 0.2, 1.3) infinite;
 }
 .link:hover::before {
     opacity: 1;
-    animation: spin .5s linear infinite;
-    background: linear-gradient(45deg, white, red, blue, green, orange, pink);
-    filter: blur(10px);
-}
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }
 @media (max-width:1130px) {
     .link {

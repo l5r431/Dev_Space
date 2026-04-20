@@ -69,7 +69,6 @@ ul {
     color: var(--white);
     transition: transform .4s ease, box-shadow .4s ease, border .3s ease;
     opacity: 0;
-    transform: translateY(40px);
     animation: fadeUp .6s ease forwards;
     position: relative;
     overflow: hidden;
@@ -111,7 +110,7 @@ ul {
 }
 .card:hover .dev {
     letter-spacing: 1px;
-    color: #fff700;
+    color: #3d4d8e;
 }
 .dev-img {
     float: left;
