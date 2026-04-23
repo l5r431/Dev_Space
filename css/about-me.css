@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 * {
@@ -131,6 +130,48 @@ main {
 
 .ink:hover i {
   transform: rotate(360deg) scale(1.2);
+}
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #000000;
+    }
+.tech {
+    padding: 0 .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+#tech-stack {
+    text-align: center;
+    font-style: italic;
+    margin-top: .5rem;
+}
+.stack-card {
+    background: #844387;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform .4s;
+}
+.stack-card:hover {
+    transform: translateY(-3px) scale(1.05);
+}
+.stack-img {
+    width: 100%;
+    height: 50px;
+    object-fit: cover;
+    border: none;
+}
+.h-stack {
+    text-align: center;
+    font-size: .8rem;
+    color: var(--dark);
+}
+.explan {
+    font-size: .7rem;
+    text-align: center;
 }
 .hero {
     line-height: inherit;
@@ -265,7 +306,12 @@ main {
   transition: opacity 0.4s ease;
   animation: spin 5s cubic-bezier(0.3, 0.8, 0.2, 1.3) infinite;
 }
-
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .feeds::after {
   content: "";
   position: absolute;
@@ -338,12 +384,6 @@ main {
     main {
         display: grid;
         grid-template-columns: 200px minmax(0, 1fr);
-    }
-    .navbar {
-        position: sticky;
-        top: 0;
-        z-index: 2;
-        background: #000;
     }
     .pinned {
         grid-column: 1/-1;
