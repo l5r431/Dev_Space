@@ -24,11 +24,10 @@ p {
     border-radius: 50%;
     background: dimgray;
     z-index: 2;
-    opacity: .7;
-
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform .4s;
 }
 .top {
     position: absolute;
@@ -37,7 +36,7 @@ p {
     height: 24px;
 }
 .top-wrapper:hover {
-    opacity: 1;
+    transform: scale(1.07);
 }
 .devs {
     background-color: var(--dark);
