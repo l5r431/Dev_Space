@@ -472,7 +472,7 @@ ul {
     justify-content: center;
     align-items: center;
     margin-top: 5rem;
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.756);
     border: 1px solid white;
     border-radius: 30px;
     padding: .8rem;
@@ -491,7 +491,7 @@ ul {
 }
 .t-card:hover {
     transform: translateY(-8px) scale(1.03);
-    background: rgba(255, 255, 255, 0.756);
+    background: #ffffff;
     box-shadow: 0 15px 30px rgba(255, 255, 255, 0.5);
 }
 .t-card:hover .fa-quote-left {

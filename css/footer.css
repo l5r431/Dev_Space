@@ -12,6 +12,7 @@
     font-size: clamp(16px, 1.5vw, 1.4rem);
     font-family: Poppins, Serif;
     opacity: .6;
+    margin: 0 0 1.5rem 0;
 }
 .fa-discord, .fa-tiktok, .fa-envelope {
     color: white;
