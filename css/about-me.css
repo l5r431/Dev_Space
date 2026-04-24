@@ -149,8 +149,8 @@ main {
     margin-top: .5rem;
 }
 .stack-card {
-    background: #844387;
-    border: none;
+    background: #272628;
+    border: 1px solid rgb(136, 136, 136);
     border-radius: 20px;
     overflow: hidden;
     transition: transform .4s;
