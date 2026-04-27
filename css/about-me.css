@@ -7,18 +7,59 @@
     box-sizing: border-box;
 }
 :root {
-    --dark: #000000;
-    --white: #ffffff;
-    --red: #7e3481;
+    --bg-primary: hsl(210deg 15% 6%);
+    --bg-main: #000000;
+    --bg-secondary: #000000;
+    --bg-glass: rgba(15, 23, 42, 0.6);
+
+    /*text*/
+    --text-main: #feffff;
+    --text-muted: #94a3b8;
+
+    /* Cards */
+    --card-bg: #0f172a;
+    --card-border: #0f0f0f;
+
+    /* Effects */
+    --hover-bg: rgba(255, 255, 255, 0.05);
+    --shadow: 0 5px 20px rgba(255, 255, 255, 0.556);
+
+    /* Accent */
+    --primary: #b053bb;
+    --gradient: linear-gradient(90deg, #f701ff, #8400ff);
+}
+.light-mode {
+    /* Backgrounds */
+    --bg-main: #fffffd;
+    --bg-secondary: #899296;
+    --bg-glass: rgba(255, 255, 255, 0.6);
+
+    /* Text */
+    --text-main: #000000;
+    --text-muted: #475569;
+
+    /* Cards */
+    --card-bg: #ffffff;
+    --card-border: #e5e7eb;
+
+    /* Effects */
+    --hover-bg: rgba(0, 0, 0, 0.05);
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.735);
+
+    /* Accent */
+    --primary: #9f8ac3;
+    --gradient: linear-gradient(90deg, #f701ff, #8400ff);
+}
+body {
+    overflow-x: hidden;
 }
 main {
     display: grid;
     grid-template-columns: 200px minmax(0, 1fr);
     font-family: Poppins, sans-serif;
-    background: var(--dark);
-    color: var(--white);
+    background: var(--bg-main);
+    color: var(--text-main);
     position: relative;
-    padding-right: .5rem;
 }
 .navbar-mobile {
     position: fixed;
@@ -37,7 +78,7 @@ main {
     right: 0;
 }
 .m-link {
-    color: white;
+    color: var(--text-main);
     text-decoration: none;
     font-weight: 600;
     margin: .5rem 1.5rem;
@@ -64,6 +105,37 @@ main {
 }
 .m-link:hover::before {
     opacity: 1;
+}
+.top-wrapper {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: var(--text-muted);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .4s;
+    box-shadow: var(--shadow);
+}
+.top {
+    position: absolute;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+}
+.top-wrapper:hover {
+    transform: scale(1.07);
+}
+#light {
+    position: absolute;
+    top: .5rem;
+    right: 3rem;
+    width: 25px;
 }
 .close {
     width: 40px;
@@ -98,6 +170,7 @@ main {
 }
 .header {
     position: relative;
+    background: black;
 }
 .s-head {
     text-align: center;
@@ -114,24 +187,29 @@ main {
 }
 .navbar {
     display: flex;
+    background: var(--card-border);
+    position: sticky;
+    top: 0;
     flex-direction: column;
     border-bottom: 1px solid rgb(20, 20, 20);
     padding: 0 0 .4rem 0;
 }
 .ink {
-    color: var(--white);
+    color: var(--text-main);
     text-decoration: none;
     margin: .5rem;
     font-weight: 200;
     font-size: 1.2rem;
     opacity: .8;
     transition: transform .4s;
+    box-shadow: var(--shadow);
+    border-radius: 20px;
 }
 .ink:hover {
     opacity: 1;
     transform: translateX(3px);
-    background: rgba(255,255,255,0.05);
-    border-radius: 8px;
+    background: var(--text-muted);
+    border-radius: 20px;
 }
 .ink i {
   margin: .5rem;
@@ -143,17 +221,12 @@ main {
 .ink:hover i {
   transform: rotate(360deg) scale(1.2);
 }
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    background: #000000;
-    }
 .tech {
     padding: 0 .5rem;
     display: flex;
     flex-direction: column;
     gap: .7rem;
+    background: var(--bg-main);
 }
 #tech-stack {
     text-align: center;
@@ -161,12 +234,13 @@ main {
     margin-top: .5rem;
 }
 .stack-card {
-    background: #fafafa;
-    border: 1px solid rgb(136, 136, 136);
+    background: var(--primary);
+    border: 1px solid var(--card-border);
     border-radius: 20px;
     color: var(--dark);
     overflow: hidden;
     transition: transform .4s;
+    box-shadow: var(--shadow);
 }
 .stack-card:hover {
     transform: translateY(-3px) scale(1.05);
@@ -180,18 +254,18 @@ main {
 .h-stack {
     text-align: center;
     font-size: .8rem;
-    color: var(--dark);
+    color: var(--text-main);
 }
 .explan {
     font-size: .7rem;
     text-align: center;
+    padding: .1rem 0;
 }
 .hero {
     line-height: inherit;
     position: relative;
-    border-left: 1px solid rgb(42, 42, 42);
     padding: 0 .5rem;
-    background: #000000dc;
+    background: var(--bg-main);
 }
 .blank {
     width: 100%;
@@ -206,7 +280,7 @@ main {
 .mine {
     width: 150px;
     height: 150px;
-    border: 3px solid white;
+    border: 3px solid var(--card-border);
     object-fit: cover;
     border-radius: 50%;
     position: absolute;
@@ -216,16 +290,17 @@ main {
 }
 .mine:hover {
     transform: scale(1.1) rotate(3deg);
-    box-shadow: 0 0 10px rgb(255, 255, 255);
+    box-shadow: var(--shadow);
+    border: var(--text-muted);
 }
 .my-name {
-    color: var(--white);
+    color: var(--text-main);
     font-size: clamp(1rem, 2.5vw, 4rem);
 }
 .git-link {
-    color: var(--white);
+    color: var(--text-main);
     text-decoration: none;
-    background: linear-gradient(90deg, #f701ff, #8400ff);
+    background: var(--gradient);
     padding: .2rem .5rem .3rem .7rem;
     border: none;
     border-radius: 20px;
@@ -246,7 +321,7 @@ main {
   inset: 0;
   border: none;
   border-radius: 20px;
-  background: linear-gradient(180deg, #f701ff, #8400ff);
+   background: linear-gradient(180deg, #f701ff, #8400ff);
   opacity: 0;
   z-index: -1;
   transition: opacity .6s ease;
@@ -277,11 +352,11 @@ main {
     font-size: clamp(16px, 2.5vw, 1rem);
 }
 .st, .rd {
-    color: #844387;
+    color: var(--primary);
     font-weight: 500;
 }
 .nd, .th {
-    color: rgb(66, 140, 119);
+    color: rgb(61, 195, 132);
 }
 .third {
     opacity: .8;
@@ -298,23 +373,25 @@ main {
   border-radius: 20px;
   padding: 0.5rem;
   margin: 0.5rem;
-  background: #000;
+  background: var(--bg-main);
   overflow: hidden;
   z-index: 1;
   cursor: pointer;
+  color: var(--text-main);
   opacity: 0;
   transform: translateY(30px);
   animation: fadeUp .6s ease forwards;
   animation-delay: .5s;
+  box-shadow: var(--shadow);
 }
 .feeds::before {
   content: '';
   position: absolute;
   inset: -4px;
+  box-shadow: var(--shadow);
   border-radius: 20px;
   background: linear-gradient(45deg, red, blue, green, white, cyan, magenta, orange, yellow);
-  z-index: -2; 
-  filter: blur(6px); 
+  z-index: -2;
   opacity: 0; 
   transition: opacity 0.4s ease;
   animation: spin 5s cubic-bezier(0.3, 0.8, 0.2, 1.3) infinite;
@@ -329,11 +406,9 @@ main {
   content: "";
   position: absolute;
   inset: 3px;
-  background: #030303;
+  background: var(--bg-main);
   border-radius: 16px;
   z-index: -1;
-  border-top: 1px solid white;
-  border-right: 1px solid white;
 }
 .feeds:hover::after {
     border: none;
@@ -360,16 +435,20 @@ main {
     width: 32px;
     height: 30px;
     object-fit: cover;
-    border: 1px solid white;
+    border: 1px solid var(--card-border);
     border-radius: 50%;
     margin: 0 .5rem;
 }
+.h-meta {
+    color: var(--text-main);
+}
 .feel {
     display: inline-block;
-    background-color: #ffffff37;
+    background-color: var(--card-border);
     padding: 0 .3rem;
     border: none;
     border-radius: 10px;
+    color: var(--text-main);
 }
 .main-head {
     margin-bottom: .5rem;
@@ -377,21 +456,6 @@ main {
 .main-meta {
     opacity: .7;
     margin-bottom: .6rem;
-}
-.copyright {
-    padding: 1rem;
-    text-align: center;
-}
-.copy {
-    opacity: .5;
-    font-size: .9rem;
-}
-.l5r4, .def {
-    color: #7e3481;
-}
-.yr {
-    opacity: .5;
-    font-size: .7rem;
 }
 @media(max-width:1070px) {
     main {
@@ -451,7 +515,7 @@ main {
     }
     .fa-square-github, .fa-tiktok {
         font-size: 1rem;
-        color: rgb(255, 255, 255);
+        color: var(--white);
     }
     .fa-discord {
         font-size: 1rem;
@@ -503,14 +567,14 @@ main {
 }
 .footer {
     padding: .5rem;
-    background: black;
+    background: var(--dark);
     display: flex;
     flex-direction: column;
     align-items: center;
     display: none;
 }
 #footer-header {
-    color: white;
+    color: var(--white);
     font-size: 1rem;
     font-family: Poppins, Serif;
     opacity: .6;
@@ -523,7 +587,7 @@ main {
     transform: scale(1.2);
 }
 #copyright {
-    color: white;
+    color: var(--white);
     opacity: .5;
     align-self: self-end;
     margin-right: 2rem;

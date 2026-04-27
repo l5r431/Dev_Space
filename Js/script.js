@@ -1,6 +1,8 @@
 const menu = document.getElementById('menu');
 const close = document.getElementById('close');
 const navbar = document.querySelector('.navbar-mobile');
+const mode = document.getElementById('light');
+const modes = document.querySelector('.light-mode');
 
 menu.addEventListener('click', () => {
   navbar.classList.add('active');
@@ -17,3 +19,6 @@ document.addEventListener('click', (e) => {
     navbar.classList.remove('active');
   }
 });
+mode.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+})
