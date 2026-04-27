@@ -1,4 +1,3 @@
-const modes = document.querySelector('.light-mode');
 const mode = document.getElementById('toggle');
 const checkbox = document.getElementById('menu');
 const menu = document.querySelector('.navbar-mobile');
@@ -6,7 +5,20 @@ const menu = document.querySelector('.navbar-mobile');
 checkbox.addEventListener('change', () => {
     menu.classList.toggle('active');
 });
+document.addEventListener('DOMContentLoaded', () => {
 
-mode.addEventListener('change', () => {
-  document.body.classList.toggle('light-mode');
+
+    // safety check
+    if (checkbox && menu) {
+        checkbox.addEventListener('change', () => {
+            menu.classList.toggle('active', checkbox.checked);
+        });
+    }
+
+    if (mode) {
+        mode.addEventListener('change', () => {
+            document.body.classList.toggle('light-mode', mode.checked);
+        });
+    }
+
 });
