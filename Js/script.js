@@ -7,6 +7,6 @@ checkbox.addEventListener('change', () => {
     menu.classList.toggle('active');
 });
 
-mode.addEventListener('click', () => {
+mode.addEventListener('change', () => {
   document.body.classList.toggle('light-mode');
 });
