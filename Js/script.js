@@ -1,24 +1,12 @@
-const menu = document.getElementById('menu');
-const close = document.getElementById('close');
-const navbar = document.querySelector('.navbar-mobile');
-const mode = document.getElementById('light');
 const modes = document.querySelector('.light-mode');
+const mode = document.getElementById('toggle');
+const checkbox = document.getElementById('menu');
+const menu = document.querySelector('.navbar-mobile');
 
-menu.addEventListener('click', () => {
-  navbar.classList.add('active');
+checkbox.addEventListener('change', () => {
+    menu.classList.toggle('active');
 });
 
-close.addEventListener('click', () => {
-  navbar.classList.remove('active');
-});
-document.addEventListener('click', (e) => {
-  if (
-    !navbar.contains(e.target) &&
-    !menu.contains(e.target)
-  ) {
-    navbar.classList.remove('active');
-  }
-});
 mode.addEventListener('click', () => {
   document.body.classList.toggle('light-mode');
-})
+});
