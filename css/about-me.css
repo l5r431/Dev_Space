@@ -73,7 +73,7 @@ main {
     position: fixed;
     top: 0;
     right: -100vw;
-    height: fit-content;
+    height: 50vh;
     width: min(300px, 85vw);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter:blur(10px);
