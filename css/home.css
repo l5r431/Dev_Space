@@ -9,7 +9,7 @@ p {
     font-family: Poppins, sans-serif;
 }
 .devs {
-    background: var(--bg-main);
+    background: var(--bg-primary);
 }
 #devs {
     scroll-margin-top: 50px;
@@ -32,6 +32,7 @@ ul {
 }
 .card {
     background-color: var(--bg-main);
+    border: 1px solid var(--card-border);
     box-shadow: var(--shadow);
     padding: .5rem .5rem;
     border-radius: 20px;
@@ -153,7 +154,7 @@ ul {
     transition-duration: .6s;
 }
 .projects {
-    background: var(--bg-main);
+    background: var(--bg-primary);
 }
 #projects {
     text-align: center;
@@ -290,7 +291,7 @@ ul {
 .p-link {
     color: var(--text-muted);
     text-decoration: none;
-    background: var(--bg-main);
+    background: white;
     margin: .6rem;
     padding: .4rem;
     font-weight: bold;
@@ -336,7 +337,7 @@ ul {
   100% { transform: rotate(360deg); }
 }
 .testimonials {
-    background: var(--bg-main);
+    background: var(--bg-primary);
     padding: 0 .5rem .5rem .5rem;
 }
 #test {
@@ -359,8 +360,8 @@ ul {
     justify-content: center;
     align-items: center;
     margin-top: 5rem;
-    background: rgba(255, 255, 255, 0.756);
-    border: 1px solid white;
+    background: var(--bg-main);
+    border: 1px solid var(--card-border);
     border-radius: 30px;
     padding: .8rem;
     box-shadow: var(--shadow);
@@ -369,7 +370,7 @@ ul {
 }
 .fa-quote-left {
     position: absolute;
-    color: black;
+    color: var(--text-main);
     top: .5rem;
     left: .5rem;
     opacity: .6;
@@ -378,7 +379,7 @@ ul {
 }
 .t-card:hover {
     transform: translateY(-8px) scale(1.03);
-    background: #ffffff;
+    background: var(--bg-glass);
     box-shadow: var(--shadow);
 }
 .t-card:hover .fa-quote-left {
@@ -393,18 +394,18 @@ ul {
     opacity: .8;
     letter-spacing: 1px;
     font-family: Segoe UI, Sans serif;
-    color: black;
+    color: var(--text-main);
 }
 .job {
     transform: translateY(-4.8rem);
     opacity: .7;
-    color: black;
+    color: var(--text-main);
 }
 .test-text {
     text-align: center;
     transform: translateY(-3rem);
     opacity: .5;
-    color: black;
+    color: var(--text-main);
 }
 .name,
 .job,
@@ -431,7 +432,7 @@ ul {
     object-fit: cover;
     border-radius: 50%;
     transform: translateY(-5rem);
-    border: 3px solid white;
+    border: 3px solid var(--card-border);
     box-shadow: var(--shadow);
     backdrop-filter: blur(5px);
     transition: transform .4s ease, box-shadow .4s ease;
