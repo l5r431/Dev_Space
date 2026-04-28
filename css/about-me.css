@@ -98,7 +98,7 @@ main {
     position: fixed;
     top: 0;
     right: -100vw;
-    height: 50vh;
+    height: fit-content;
     width: min(300px, 85vw);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter:blur(10px);
@@ -107,7 +107,7 @@ main {
     border-radius: 0 0 0 20px;
     z-index: 2;
     transition: right .2s linear;
-    padding-top: 2rem;
+    padding-top: 3rem;
     box-shadow: var(--shadow);
 }
 .navbar-mobile.active { 
@@ -123,7 +123,7 @@ main {
     z-index: 0;
     font-size: 1.1rem;
     margin: 1rem 1rem;
-    opacity: .7;
+    opacity: .9;
     transition: transform .5s, background .8s, padding .5s;
     font-family: Poppins, sans-serif, system-ui, -apple-system;
 }
@@ -131,12 +131,11 @@ main {
     content: '';
     position: absolute;
     inset: -10px;
-    background: rgb(190, 190, 190);
+    background: rgb(113, 113, 113);
     padding: .4rem .5rem;
     box-shadow: var(--shadow);
     border: none;
     border-radius: 20px;
-    opacity: .8;
     z-index: -1;
     transition: opacity .6s;
 }
@@ -220,7 +219,7 @@ main {
 
 /* Container */
 .menu {
-    width: 27px;
+    width: 30px;
     height: 20px;
     display: flex;
     flex-direction: column;
@@ -258,7 +257,7 @@ main {
 /* Top */
 #menu:checked + .menu #bar1 {
     transform: translateY(5px) rotate(45deg);
-    width: 24px;
+    width: 30px;
 }
 
 /* Middle */
@@ -270,7 +269,7 @@ main {
 /* Bottom */
 #menu:checked + .menu #bar3 {
     transform: translateY(-10px) rotate(-45deg);
-    width: 24px;
+    width: 30px;
 }
 
 /* Click feel */
@@ -339,6 +338,7 @@ main {
     padding: 0 0 .4rem 0;
     box-shadow: var(--shadow);
     margin: .5rem;
+    z-index: 3;
 }
 .ink {
     color: var(--text-main);

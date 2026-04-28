@@ -7,27 +7,71 @@
     align-items: center;
     z-index: 2;
 }
+.footer-icons {
+    display: flex;
+    flex-direction: row;
+    gap: .6rem;
+}
+.footer-link {
+    background: white;
+    padding: .3rem;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+.footer-link::before {
+    content: attr(data-social);
+    position: absolute;
+    background: white;
+    padding: .4rem .7rem;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 550;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: transform .3s cubic-bezier(.42,0,.44,1.68), opacity .3s cubic-bezier(.42,0,.44,1.68);
+}
+.footer-link:hover::before {
+    opacity: 1;
+    transform: translateY(-45px) rotate(0deg);
+}
+.footer-link::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-top: 10px solid rgb(255, 255, 255);
+    position: absolute;
+    opacity: 0;
+    transition: transform .3s cubic-bezier(.42,0,.44,1.68), opacity .3s cubic-bezier(.42,0,.44,1.68);
+}
+.footer-link:hover::after {
+    opacity: 1;
+    transform: translateY(-25px);
+}
 #footer-header {
     color: white;
     font-size: clamp(16px, 1.5vw, 1.4rem);
     font-family: Poppins, Serif;
     opacity: .6;
-    margin: 0 0 1.5rem 0;
+    margin: 0 0 2rem 0;
 }
-.fa-discord, .fa-tiktok, .fa-envelope {
-    color: white;
-    margin: .3rem;
-    font-size: 1.5rem;
+.fa-discord, .fa-tiktok, .fa-envelope, .fa-square-github {
+    color: rgb(0, 0, 0);
 }
 .fa-telegram, .fa-bluesky {
-    color: aquamarine;
-    margin: .3rem;
-    font-size: 1.5rem;
+    color: rgb(0, 128, 255);
 }
 .fa-instagram, .fa-dribbble {
-    color: rgb(194, 83, 83);
-    margin: .3rem;
-    font-size: 1.5rem;
+    color: rgb(255, 0, 0);
 }
 #copyright {
     color: white;
@@ -35,4 +79,34 @@
     align-self: self-end;
     margin-right: 2rem;
     font-size: .9rem;
+}
+.fa-brands, .fa-solid {
+    font-size: clamp(16px, 1.5vw, 1.5rem);
+}
+@media(max-width:430px) {
+    .fa-brands, .fa-solid {
+        font-size: .9rem;
+    }
+    .footer-link {
+       background: white;
+       padding: .1rem;
+       border-radius: 50%;
+    }
+    #footer-header {
+        color: white;
+        font-size: clamp(16px, 1.5vw, 1.4rem);
+        font-family: Poppins, Serif;
+        opacity: .6;
+        margin: 0 0 .4rem 0;
+    }
+}
+@media(max-width:385px) {
+    .fa-brands, .fa-solid {
+        font-size: .7rem;
+    }
+    .footer-link {
+    background: white;
+    padding: 0;
+    border-radius: 50%;
+    }
 }

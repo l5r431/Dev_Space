@@ -34,7 +34,7 @@ ul {
     background-color: var(--bg-main);
     border: 1px solid var(--card-border);
     box-shadow: var(--shadow);
-    padding: .5rem .5rem;
+    padding: .7rem;
     border-radius: 20px;
     color: var(--text-main);
     transition: transform .4s ease, box-shadow .4s ease, border .3s ease;
@@ -74,7 +74,6 @@ ul {
 .dev-des {
     font-family: Poppins, sans-serif;
     margin-top: 1rem;
-    letter-spacing: 1px;
     opacity: .7;
 }
 .dev1, .dev3 {
@@ -94,64 +93,21 @@ ul {
     grid-row: span 1;
 }
 }
+@media(max-width:620px) {
+    .dev1, .dev3 {
+       grid-column: span 2;
+    }
+}
 @media(max-width:500px) {
     .dev-cards {
-    grid-template-columns: repeat(1, minmax(200px, 1fr));
-  }
+       grid-template-columns: 1fr;
+    }
+  .dev1, .dev3 {
+       grid-column: span 1;
+    }
+    .dev5, .dev6, .dev4, .dev2 {
+    grid-column: span 1;
 }
-.info {
-    text-align: center;
-    margin: .5rem;
-    letter-spacing: 1px;
-    font-size: 1.2rem;
-}
-.d-links {
-    padding: 1rem .4rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-.d-links i {
-    transition: transform .3s ease, opacity .3s ease;
-}
-
-.d-links a:hover i {
-    transform: scale(1.2) translateY(-2px);
-    opacity: 1;
-}
-.fa-linkedin {
-    color: rgb(66, 66, 180);
-    font-size: 1.5rem;
-}
-.fa-square-github, .fa-square-x-twitter {
-    color: var(--text-main);
-    font-size: 1.5rem;
-}
-
-.fa-globe {
-    color: deepskyblue;
-    font-size: 1.5rem;
-}
-.fa-youtube {
-    color: rgb(253, 81, 81);
-    font-size: 1.5rem;
-}
-.fa-youtube:hover {
-    transform: scale(1.2);
-    transition-duration: .6s;
-}
-.w-icon {
-    margin-top: 1px;
-}
-.fa-solid:hover {
-    transform: scale(1.2);
-    transition-duration: .6s;
-}
-.fa-brands:hover {
-    transform: scale(1.2);
-    transition-duration: .6s;
 }
 .projects {
     background: var(--bg-primary);
