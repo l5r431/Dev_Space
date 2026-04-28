@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/index-header.css">
     <script src="https://kit.fontawesome.com/1dedf583a5.js" crossorigin="anonymous"></script>
     <title>Landing Page | DEV-SPACE</title>
-    <script src="js/script.js" defer></script>
+    <script src="js/index.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -20,7 +20,13 @@
             <span class="logo">D3F4U17's </span>
             <span class="log"><i>Dev-Space</i></span>
         </a>
-         
+
+        <input id="menu" type="checkbox">
+        <label class="menu" for="menu">
+            <div id="bar1" class="bars"></div>
+            <div id="bar2" class="bars"></div>
+            <div id="bar3" class="bars"></div>
+        </label>
         <div class="navbar">
             <a href="about-me.html" class="d-link">About Me</a>
             <a href="create.html" class="d-link">Upload Project</a>
@@ -29,9 +35,7 @@
         <nav class="navbar">
             <a href="about-me.html" class="link">GET STARTED</a>
         </nav>
-        <img src="images/menu.svg" alt="Open side bar" class="menu" id="menu">
         <div class="navbar-mobile">
-            <img src="images/close.svg" alt="Close menu" title="Close Menu" class="close" id="close">
             <a href="index.html" class="m-link">Welcome</a>
             <a href="about-me.html" class="m-link">About Me</a>
             <a href="create.html" class="m-link">Upload Project</a>
@@ -56,7 +60,7 @@
                 </nav>
             </div>
             <div class="center">
-                <h1 id="heading">WELCOME TO D3F4U17's DEVSPACE.</h1>
+                <h1 id="heading">WELCOME TO D3F4U17's PORTIFOLIO.</h1>
                 <p  class="hero-meta">I furthermore Welcome you to my Devspace & Portifolio where Ideas are turned to <br> <code class="high">Functional</code>, <code class="high">Creative</code>, and <span class="high"><code>Clean Code</code></span>.</p>
                 <p class="dev">Regards From: <span class="bolden">D3F4U17 | @l5r431</span></p>
                     <img src="images/devs/devi.png" class="img-isr" alt="Israels Image modified by AI">
