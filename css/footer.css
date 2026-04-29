@@ -6,6 +6,12 @@
     flex-direction: column;
     align-items: center;
     z-index: 2;
+    transition: opacity .7s;
+}
+.footer:hover {
+    #footer-header {
+        opacity: 0;
+    }
 }
 .footer-icons {
     display: flex;
@@ -32,7 +38,7 @@
     border: none;
     border-radius: 15px;
     text-decoration: none;
-    color: black;
+    color: var(--accent-color);
     font-weight: 550;
     transform: rotate(45deg);
     opacity: 0;
@@ -63,12 +69,13 @@
     font-family: Poppins, Serif;
     opacity: .6;
     margin: 0 0 2rem 0;
+    transition: opacity 2s;
 }
-.fa-discord, .fa-tiktok, .fa-envelope, .fa-square-github {
+.fa-tiktok, .fa-envelope, .fa-square-github {
     color: rgb(0, 0, 0);
     font-size: clamp(16px, 1.5vw, 1.5rem);
 }
-.fa-telegram, .fa-bluesky {
+.fa-telegram, .fa-bluesky, .fa-discord {
     color: rgb(0, 128, 255);
     font-size: clamp(16px, 1.5vw, 1.5rem);
 }

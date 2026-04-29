@@ -223,7 +223,7 @@ main {
     width: 100%;
     opacity: 1;
 }
-.link, .g-link {
+.link {
     display: flex;
     color: var(--dark);
     background-color: var(--white);
@@ -238,16 +238,9 @@ main {
     position: relative;
     z-index: 2;
 }
-.g-link:hover {
-    transform: translateY(-4px);
-    opacity: 1;
-}
 .link:hover {
     transform: translateY(-4px);
     opacity: 1;
-}
-.g-link:active {
-    background: var(--dark);
 }
 .link:active {
     background: var(--dark);
@@ -340,7 +333,7 @@ main {
     border: none;
     border-radius: 15px;
     text-decoration: none;
-    color: black;
+    color: var(--accent-color);
     font-weight: 550;
     transform: rotate(45deg);
     z-index: 5;
@@ -365,7 +358,7 @@ main {
 }
 .footer-link:hover::after {
     opacity: 1;
-    transform: translateY(-20px);
+    transform: translateY(-24px);
 }
 #footer-header {
     color: white;
@@ -373,10 +366,10 @@ main {
     font-family: Poppins, Serif;
     opacity: .6;
 }
-.fa-discord, .fa-tiktok, .fa-envelope, .fa-square-github {
+.fa-envelope, .fa-square-github, .fa-tiktok {
     color: rgb(0, 0, 0);
 }
-.fa-telegram, .fa-bluesky {
+.fa-telegram, .fa-bluesky, .fa-discord {
     color: rgb(0, 128, 255);
 }
 .fa-instagram, .fa-dribbble {
