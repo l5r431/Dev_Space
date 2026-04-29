@@ -12,18 +12,22 @@
                 border-color 0.3s ease,
                 box-shadow 0.3s ease;
 }
-:root {
+.light-mode {
     --bg-primary: hsl(220, 16%, 2%);
     --bg-main: #000000;
     --bg-secondary: #000000;
-    --bg-glass: rgba(15, 23, 42, 0.6);
+    --bg-glass: rgba(13, 19, 34, 0.438);
 
     /*text*/
     --text-main: #feffff;
     --text-muted: #94a3b8;
     --radius: border-radius: 0 0 0 0;
+    --bg-card: hsl(19, 24%, 13%);
 
     /* Cards */
+    --t-card-border: hsl(220, 16%, 14%);
+    --shadow: 0 10px 25px rgb(0, 0, 0),
+          0 0 10px rgba(255, 255, 255, 0.05);
     --card-bg: #0f172a;
     --card-border: #2b2b2b;
     --card-lg: linear-gradient(18deg, black, rgb(80, 43, 68));
@@ -37,7 +41,7 @@
     --primary: #b053bb;
     --gradient: linear-gradient(90deg, #f701ff, #8400ff);
 }
-.light-mode {
+:root {
     /* Backgrounds */
     --bg-main: #fffffd;
     --bg-secondary: #899296;
@@ -88,7 +92,7 @@ body {
 }
 main {
     display: grid;
-    grid-template-columns: 200px minmax(0, 1fr);
+    grid-template-columns: 220px minmax(0, 1fr);
     font-family: Poppins, sans-serif;
     background: var(--bg-main);
     color: var(--text-main);
@@ -144,6 +148,15 @@ main {
 }
 .m-link:hover::before {
     opacity: 1;
+}
+.m-link i {
+  font-size: 1.3rem;
+  display: inline-block;
+  transition: transform 0.6s ease;
+}
+
+.m-link:hover i {
+  transform: rotate(360deg) scale(1.2);
 }
 /* Hide default checkbox */
 .toggle-btn {
@@ -618,7 +631,7 @@ main {
 @media(max-width:1070px) {
     main {
         display: grid;
-        grid-template-columns: 220px minmax(0, 1fr);
+        grid-template-columns: 200px minmax(0, 1fr);
     }
     .second {
        opacity: .8;
@@ -648,10 +661,10 @@ main {
         height: 120px;
     }
     .ink {
-        font-size: .7rem;
+        font-size: .9rem;
     }
-    .link i {
-        font-size: 1rem;
+    .ink i {
+        font-size: .9rem;
         display: inline-block;
         transition: transform 0.6s ease;
     }

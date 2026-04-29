@@ -45,6 +45,17 @@
         });
     }
 
+    document.addEventListener('click', (e) => {
+        if (
+            navbar.classList.contains('active') &&
+            !navbar.contains(e.target) &&
+            !menu.contains(e.target)
+        ) {
+            menuToggle.checked = false;
+            navbar.classList.remove('active');
+        }
+    });
+
     // =========================
     // MENU TOGGLE
     // =========================
